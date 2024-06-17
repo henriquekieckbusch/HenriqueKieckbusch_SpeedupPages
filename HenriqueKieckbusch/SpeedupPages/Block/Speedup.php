@@ -2,20 +2,20 @@
 declare(strict_types=1);
 
 namespace HenriqueKieckbusch\SpeedupPages\Block;
-use Aheadworks\Blog\Model\Serialize\SerializeInterface;
 use HenriqueKieckbusch\SpeedupPages\Model\Config;
+use Magento\Framework\Serialize\SerializerInterface;
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 
 class Speedup extends Template
 {
-    private SerializeInterface $serializer;
+    private SerializerInterface $serializer;
 
     private Config $config;
 
     public function __construct(
         Context $context,
-        SerializeInterface $serializer,
+        SerializerInterface $serializer,
         Config $config,
         array $data = []
     ) {
