@@ -1,0 +1,22 @@
+{
+    "name": "henriquekieckbusch/module-speeduppages",
+    "description": "This module will speedup the site preloading content when the browser is idle",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Henrique Kieckbusch",
+            "email": "hckhenrique@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "HenriqueKieckbusch\\SpeedupPages\\": ""
+        }
+    }
+}

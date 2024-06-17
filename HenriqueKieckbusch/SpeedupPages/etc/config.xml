@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<config
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<speed_up>
+			<speedup_module>
+				<enabled>1</enabled>
+				<preload_products_pdp>1</preload_products_pdp>
+				<preload_category_pages>0</preload_category_pages>
+				<preload_cms_pages>0</preload_cms_pages>
+				<preload_cart_after_add_to_the_cart>0</preload_cart_after_add_to_the_cart>
+			</speedup_module>
+		</speed_up>
+	</default>
+</config>

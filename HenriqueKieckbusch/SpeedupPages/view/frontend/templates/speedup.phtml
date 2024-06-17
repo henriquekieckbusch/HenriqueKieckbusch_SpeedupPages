@@ -1,0 +1,14 @@
+<?php
+if ($block->isDisabled()) {
+    return;
+}
+?>
+<script type="text/x-magento-init">
+{
+    "body": {
+        "HenriqueKieckbusch_SpeedupPages/js/speedup": {
+            "preload": <?php /* @noEscape */ echo $block->getSpeedupConfig() ?>
+        }
+    }
+}
+</script>
