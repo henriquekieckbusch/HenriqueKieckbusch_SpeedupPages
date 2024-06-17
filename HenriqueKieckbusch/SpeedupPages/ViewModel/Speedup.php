@@ -1,25 +1,23 @@
 <?php
 declare(strict_types=1);
 
-namespace HenriqueKieckbusch\SpeedupPages\Block;
+namespace HenriqueKieckbusch\SpeedupPages\ViewModel;
 use HenriqueKieckbusch\SpeedupPages\Model\Config;
+use Magento\Framework\DataObject;
 use Magento\Framework\Serialize\SerializerInterface;
-use Magento\Framework\View\Element\Template;
-use Magento\Framework\View\Element\Template\Context;
+use Magento\Framework\View\Element\Block\ArgumentInterface;
 
-class Speedup extends Template
+class Speedup extends DataObject implements ArgumentInterface
 {
     private SerializerInterface $serializer;
 
     private Config $config;
 
     public function __construct(
-        Context $context,
         SerializerInterface $serializer,
-        Config $config,
-        array $data = []
+        Config $config
     ) {
-        parent::__construct($context, $data);
+        parent::__construct();
         $this->serializer = $serializer;
         $this->config = $config;
     }

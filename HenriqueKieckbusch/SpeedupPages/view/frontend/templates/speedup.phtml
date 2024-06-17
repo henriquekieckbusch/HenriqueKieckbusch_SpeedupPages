@@ -1,13 +1,17 @@
 <?php
-if ($block->isDisabled()) {
+/** @var HenriqueKieckbusch\SpeedupPages\ViewModel\Speedup $viewModel */
+$viewModel = $this->getViewModel();
+
+if ($viewModel->isDisabled()) {
     return;
 }
+
 ?>
 <script type="text/x-magento-init">
 {
     "body": {
         "HenriqueKieckbusch_SpeedupPages/js/speedup": {
-            "preload": <?php /* @noEscape */ echo $block->getSpeedupConfig() ?>
+            "preload": <?php /* @noEscape */ echo $viewModel->getSpeedupConfig() ?>
         }
     }
 }
